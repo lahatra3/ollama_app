@@ -1,0 +1,18 @@
+version: '3'
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama_app
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./ollama:/root/.ollama
+    restart: always
+    entrypoint: ""
+    command: "ollama serve && ollama run llama2"
+    networks:
+      - lahatrad_network
+
+networks:
+  lahatrad_network:
+  
