@@ -8,11 +8,8 @@ services:
     volumes:
       - ./ollama:/root/.ollama
     restart: always
-    entrypoint: ""
-    command: "ollama serve && ollama run llama2"
     networks:
       - lahatrad_network
 
 networks:
   lahatrad_network:
-  
