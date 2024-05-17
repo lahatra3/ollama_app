@@ -3,7 +3,7 @@ services:
     image: ollama/ollama
     container_name: ollama_app
     ports:
-      - "11434:11434"
+      - "127.0.0.1:11434:11434"
     volumes:
       - ./ollama:/root/.ollama
       - ./customize_model:/root/customize_model
